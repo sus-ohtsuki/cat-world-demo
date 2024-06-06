@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@import 'variables';
+
+@font-face {
+  font-family: 'Coves';
+  src:
+    url('../fonts/coves_bold-webfont.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'Coves';
+  src:
+    url('../fonts/coves_light-webfont.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+
+body,
+html {
+  background-color: $color-bg;
+  overflow-x: hidden;
+}
+
+body,
+input,
+select,
+textarea,
+button {
+  font-family: 'Coves', sans-serif, Arial;
+  letter-spacing: -0.2px;
+  font-size: $ruler;
+}
+
+p {
+  font-family: 'Klee One', cursive;
+  letter-spacing: -0.2px;
+  font-weight: 500;
+  font-style: normal;
+  font-size: $ruler;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  max-width: 1366px;
+  margin: 0 auto;
+  z-index: 1000;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 2px;
+  background-color: $color-green;
+  position: relative;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+      content: '';
+      width: 40px;
+      height: 2px;
+      background-color: $color-green;
+      position: absolute;
+      left: 0;
+  }
+
+  &::before {
+      top: -8px;
+  }
+
+  &::after {
+      top: 8px;
+  }
+}
+
+form {
+  padding: $ruler;
+  width: $ruler*20;
+  margin: 0 auto;
+}
+
+.segment {
+  padding: $ruler*2 0;
+  text-align: center;
+}
+
+button {
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: $ruler * 2;
+  padding: $ruler;
+  background-color: $color-yellow;
+}
+
+input {
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: calc($ruler / 2);
+  padding: $ruler;
+  background-color: $color-bg;
+}
+
+label {
+  display: block;
+  margin-bottom: $ruler*1.5;
+  width: 100%;
+}
+
+input {
+  margin-right: calc($ruler / 2);
+  box-shadow: inset 1px 1px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+
+  &:focus {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+}
+
+button {
+  color: #61677C;
+  font-weight: bold;
+  box-shadow: -5px -5px 10px $color-white, 5px 5px 10px $color-button-shadow;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+
+  &:hover {
+    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  }
+
+  &:active {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+
+  .icon {
+    margin-right: calc($ruler / 2);
+  }
+
+  &.unit {
+    background-color: $color-bg;
+    border-radius: calc($ruler / 2);
+    background: linear-gradient(145deg, #e6e3dc, #ffffff);
+    line-height: 0;
+    width: $ruler*3;
+    height: $ruler*3;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 calc($ruler / 2);
+    font-size: $ruler*1.2;
+
+    .icon {
+      margin-right: 0;
+    }
+  }
+
+  &.green {
+    display: block;
+    width: 100%;
+    color: $color-green;
+  }
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  label {
+    margin: 0;
+    flex: 1;
+  }
+}
