@@ -317,3 +317,98 @@
     }
   }
 }
+
+// Cast
+.section-cast {
+  padding: 160px 20px;
+  max-width: 1130px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 3.6em;
+    margin-bottom: 70px;
+    color: $color-green;
+  }
+
+  &__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      gap: 32px;
+    }
+  }
+
+  &__card {
+    background: $color-white;
+    border-radius: 20px;
+    box-shadow: -5px -5px 10px $color-white, 5px 5px 10px $color-button-shadow;
+    overflow: hidden;
+    text-align: center;
+    width: 140px;
+    height: 300px;
+    max-width: 250px; // カードの最大幅を設定
+
+    &:hover {
+      box-shadow: -10px -10px 10px $color-white, 10px 10px 10px $color-shadow;
+      transform: translate(5px, 5px);
+    }
+
+    &:active {
+      box-shadow: inset 0px 0px 3px $color-shadow, inset -1px -1px 3px $color-white;
+    }
+
+    @media (min-width: 768px) {
+      width: 250px;
+      height: 400px;
+    }
+
+    &-image {
+      flex-grow: 1;
+      height: 100%;
+      display: block;
+      object-position: -70px 0;
+    }
+
+    &:nth-child(4) .section-cast__card-image {
+      object-position: -90px 0;
+    }
+  }
+
+  &__name {
+    margin-top: 10px;
+    font-size: 2.4em;
+    text-align: center;
+    color: $color-green;
+  }
+
+  // cat2とcat4のカードを下に移動
+  // cat2とcat4のカードを下に移動
+  &__card-container:nth-child(2) .section-cast__card,
+  &__card-container:nth-child(2) .section-cast__name,
+  &__card-container:nth-child(4) .section-cast__card,
+  &__card-container:nth-child(4) .section-cast__name {
+    position: relative;
+    top: 100px;
+  }
+
+  button {
+    margin: 200px 20px 0 20px;
+
+    @media (min-width: 768px) {
+      width: 345px;
+      margin: 0 auto;
+      margin-top: 250px;
+    }
+
+    &::after {
+      content: '>';
+      margin-left: 5px;
+      padding-left: 90px;
+      transition: margin-left 0.3s ease, color 0.3s ease;
+      position: absolute;
+    }  
+  }
+}
