@@ -23,21 +23,25 @@ body,
 html {
   background-color: $color-bg;
   overflow-x: hidden;
+  width: 100%;
 }
 
 body,
+h2,
 input,
 select,
 textarea,
 button {
   font-family: 'Coves', sans-serif, Arial;
   letter-spacing: -0.2px;
-  font-size: $ruler;
+  /* 16px * 62.5% = 10px */
+  font-size: 62.5%;
 }
 
 p {
   font-family: 'Klee One', cursive;
   letter-spacing: -0.2px;
+  line-height: 1.6;
   font-weight: 500;
   font-style: normal;
   font-size: $ruler;
@@ -185,5 +189,41 @@ button {
   label {
     margin: 0;
     flex: 1;
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.more-link a {
+  display: inline-block;
+  color: $color-bg;
+  text-decoration: none;
+  font-size: 2.4em;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 2px;
+  border-bottom: 1px solid $color-bg;
+  padding-right: 100px; // ラインの長さを調整
+  padding-left: 10px;
+  transition: all 0.3s ease;
+
+  &::after {
+    content: '>';
+    margin-left: 5px;
+    padding-left: 85px;
+    transition: margin-left 0.3s ease, color 0.3s ease;
+    position: absolute;
+  }
+
+  &:hover {
+    color: $color-yellow;
+    border-color: $color-yellow;
+
+    &::after {
+      color: $color-yellow;
+      margin-left: 10px; // ホバー時に矢印を動かす
+    }
   }
 }

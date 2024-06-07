@@ -238,3 +238,41 @@
     }
   }
 }
+
+// About
+.section-about {
+  margin-top: 200px;
+
+  .section-about__image {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    vertical-align:top;
+  }
+
+  .section-about-container {
+    background-color: $color-green;
+    padding-bottom: 95px;
+
+    h2 {
+      color: $color-white;
+      font-size: 3.6em;
+      padding: 95px 0 0px 20px;
+    }
+
+    p {
+      color: $color-white;
+      font-size: 1.6em;
+      padding: 30px 20px 0px 20px;
+    }
+
+    .more-link {
+      padding-top: 85px;
+      text-align: right;
+      
+      a {
+        right: 24px;
+      }
+    }
+  }
+}
