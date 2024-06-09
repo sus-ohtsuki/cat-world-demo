@@ -350,6 +350,18 @@
       max-width: 600px;
     }
 
+    address a[href*="tel:"] {
+      color: $color-green;
+      border-bottom: 1px solid $color-green;
+
+      @media (min-width: 768px) {
+        border: none;
+        pointer-events: none;
+        cursor: default;
+        text-decoration: none;
+      }
+    }
+
     ul {
       list-style: inside;
       list-style-position: inside;

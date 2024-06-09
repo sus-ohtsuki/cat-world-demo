@@ -26,6 +26,8 @@ html {
   width: 100%;
   /* 16px * 62.5% = 10px */
   font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent;
+  // -webkit-font-smoothing: antialiased;
 }
 
 body,
@@ -180,7 +182,7 @@ header {
     text-decoration: none;
     text-align: center;
     transition: all 0.3s ease;
-  
+
     @media (min-width: 768px) {
       width: 300px;
       padding: 11px 0;
@@ -200,12 +202,12 @@ header {
       background: linear-gradient(145deg, #263840, #346274);
       box-shadow: 4px 4px 10px #263840,
         -4px -4px 10px #346274;
-  
+
       &:hover {
         background-color: lighten($color-green, 20%);
         box-shadow: -5px -5px 10px lighten(#346274, 10%), 5px 5px 10px darken(#263840, 10%);
       }
-  
+
       &:active {
         box-shadow: inset 0px 0px 3px $color-green, inset -1px -1px 3px $color-green;
       }
@@ -455,34 +457,32 @@ a {
 
     &-item {
       margin-bottom: 10px;
-      padding: 0.5px 0 0.5px 24px;
-      font-size: 1.6em;
+      padding: 0 0 0 24px;
       letter-spacing: .1rem;
-      line-height: 1.2;
+      line-height: 1.8;
     }
 
     &-item.current {
       background-image: url('../images/common/logo2.svg');
       background-repeat: no-repeat;
-      background-position: top 0 left 0px;
-      background-size: 16px;
+      background-position: top 10px left 0;
+      background-size: 20px;
     }
 
     &-container {
-      display: flex;
-      flex-direction: row;
+      @media(min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+      }
     }
 
     &-link {
       color: $color-white;
       text-decoration: none;
-      font-size: 1.6em;
+      font-size: 1.8rem;
       display: flex;
       align-items: center;
-
-      &:hover {
-        text-decoration: underline;
-      }
+      padding-left: 8px;
     }
   }
 
@@ -498,11 +498,12 @@ a {
   }
 
   &__copyright {
-    padding-top: 45px;
-    padding-left: 30px;
-    font-size: 1.4em;
+    display: block;
+    padding-top: 30px;
+    font-size: 1.4rem;
     letter-spacing: .2rem;
     color: $color-bg;
+    text-align: center;
 
     @media(min-width: 768px) {
       position: absolute;
