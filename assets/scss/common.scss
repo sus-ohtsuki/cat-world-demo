@@ -39,12 +39,13 @@ button {
 }
 
 p,
+li,
 time,
 address {
   font-family: 'Klee One', cursive;
   letter-spacing: -0.2px;
   line-height: 1.6;
-  font-weight: 500;
+  font-weight: 600;
   font-style: normal;
   font-size: 1.6rem;
 }
@@ -263,6 +264,16 @@ a {
       margin-left: 10px; // ホバー時に矢印を動かす
     }
   }
+
+  &.green {
+    color: $color-green;
+    border-color: $color-green;
+
+    &:hover {
+      color: $color-yellow;
+      border-color: $color-yellow;
+    }
+  }
 }
 
 .none {
@@ -277,7 +288,7 @@ a {
   background-color: $color-green;
   padding: 40px 30px;
   color: $color-bg;
-  max-width: 1400px;
+  max-width: 1340px;
 
   @media(min-width: 1400px) {
     border-radius: 10px 10px 0 0;
