@@ -42,10 +42,24 @@
         <img src="assets/images/common/logo2.svg" alt="Cat World Logo">
       </a>
     </div>
-    <nav class="menu-icon">
+    <div class="menu-icon-area">
       <div class="menu-icon"></div>
-    </nav>
+    </div>
   </header>
+
+  <div class="menu-overlay" id="mobileMenuOverlay">
+    <span class="menu-overlay__close" id="mobileMenuClose"></span>
+    <nav class="menu-overlay__nav">
+      <ul class="menu-overlay__nav-list">
+        <li class="menu-overlay__nav-item"><a href="#" class="menu-overlay__nav-link">Top</a></li>
+        <li class="menu-overlay__nav-item"><a href="#" class="menu-overlay__nav-link down">About</a></li>
+        <li class="menu-overlay__nav-item"><a href="#" class="menu-overlay__nav-link">Cast</a></li>
+        <li class="menu-overlay__nav-item"><a href="#" class="menu-overlay__nav-link down">Contact</a></li>
+        <li class="menu-overlay__nav-item"><a href="#" class="menu-overlay__nav-link">Online Shop</a></li>
+        <li class="menu-overlay__nav-item"><a href="#" class="menu-overlay__nav-link down">Instagram</a></li>
+      </ul>
+    </nav>
+  </div>
 
   <main class="main">
     <div class="hero">
@@ -253,6 +267,8 @@
     </nav>
     <small class="footer__copyright">© Cat World. All rights reserved.</small>
   </footer>
+
+  <script src="assets/js/common.js"></script>
 </body>
 
 </html>

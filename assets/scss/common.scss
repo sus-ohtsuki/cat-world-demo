@@ -55,7 +55,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
-  max-width: 1366px;
+  max-width: 1400px;
   margin: 0 auto;
   z-index: 1000;
 }
@@ -64,12 +64,20 @@ header {
   height: 50px;
 }
 
+.menu-icon-area {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
 .menu-icon {
+  margin-left: 8px;
   width: 40px;
   height: 2px;
   background-color: $color-green;
   position: relative;
-  cursor: pointer;
+  top: 16px;
+  left: 0;
 
   &::before,
   &::after {
@@ -78,7 +86,6 @@ header {
     height: 2px;
     background-color: $color-green;
     position: absolute;
-    left: 0;
   }
 
   &::before {
@@ -87,6 +94,122 @@ header {
 
   &::after {
     top: 8px;
+  }
+}
+
+// Menu
+.menu-overlay {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(37, 70, 83, 0.9);
+  z-index: 1000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .3s linear;
+
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+  }
+
+  &__close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: $color-white;
+      top: 30px;
+      left: 0;
+      transform-origin: center;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  &__nav-item {
+    margin-bottom: 24px;
+  }
+
+  &__nav-link {
+    font-family: 'Coves', sans-serif;
+    display: inline-block;
+    width: 200px;
+    padding: 7.25px 0;
+    border-radius: 10px;
+    background: linear-gradient(.25turn, #36677B, #263840);
+    box-shadow: 4px 4px 5px #15272e,
+      -4px -4px 5px #407a91;
+    color: $color-bg;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.3s ease;
+  
+    @media (min-width: 768px) {
+      width: 300px;
+      padding: 11px 0;
+      font-size: 2.4rem;
+    }
+
+    &:hover {
+      background-color: lighten($color-green, 20%);
+      box-shadow: -5px -5px 10px lighten(#36677B, 10%), 5px 5px 10px darken(#263840, 10%);
+    }
+
+    &:active {
+      box-shadow: inset 0px 0px 3px $color-green, inset -1px -1px 3px $color-green;
+    }
+
+    &.down {
+      background: linear-gradient(145deg, #263840, #346274);
+      box-shadow: 4px 4px 10px #263840,
+        -4px -4px 10px #346274;
+  
+      &:hover {
+        background-color: lighten($color-green, 20%);
+        box-shadow: -5px -5px 10px lighten(#346274, 10%), 5px 5px 10px darken(#263840, 10%);
+      }
+  
+      &:active {
+        box-shadow: inset 0px 0px 3px $color-green, inset -1px -1px 3px $color-green;
+      }
+    }
   }
 }
 
