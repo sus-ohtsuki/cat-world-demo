@@ -1,11 +1,24 @@
 {
   document.addEventListener('DOMContentLoaded', function () {
-    // Hamburger Menu
-    hamburgerMenuToggle();
+    // Header
+    fetch('components/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header-placeholder').innerHTML = data;
+      }).then(() => {
+        // Hamburger Menu
+        hamburgerMenuToggle();
+      });
 
-    // Fade In
+    // Footer
+    fetch('components/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer-placeholder').innerHTML = data;
+      });
+
+    // Fade In Animation
     let elements = document.querySelectorAll('.fade-in');
-
     function checkPosition() {
       let windowHeight = window.innerHeight;
       elements.forEach(function (element) {
