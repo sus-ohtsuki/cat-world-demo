@@ -2,7 +2,6 @@
   document.addEventListener("DOMContentLoaded", function () {
     // モーダル関連のスクリプト
     let catModal = document.getElementById('catModal');
-    let modalClose = document.querySelector('.modal-close');
     let modalImage = document.querySelector('.modal-image');
     let modalCatName = document.querySelector('.modal-cat-name');
     let modalCatBreed = document.querySelector('.modal-cat-breed');
@@ -41,8 +40,6 @@
       card.addEventListener('click', function () {
         let catKey = card.getAttribute('data-cat');
         let cat = cats[catKey];
-        console.log(catKey);
-        console.log(cat);
 
         modalImage.src = cat.image;
         modalCatName.textContent = cat.name;
@@ -53,7 +50,7 @@
       });
     });
 
-    modalClose.addEventListener('click', function () {
+    catModal.addEventListener('click', function () {
       catModal.classList.remove('active');
     });
 

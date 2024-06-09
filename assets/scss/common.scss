@@ -27,7 +27,6 @@ html {
   /* 16px * 62.5% = 10px */
   font-size: 62.5%;
   -webkit-tap-highlight-color: transparent;
-  // -webkit-font-smoothing: antialiased;
 }
 
 body,
@@ -37,7 +36,6 @@ select,
 textarea,
 button {
   font-family: 'Coves', sans-serif, Arial;
-  letter-spacing: -0.2px;
 }
 
 p,
@@ -45,7 +43,7 @@ li,
 time,
 address {
   font-family: 'Klee One', cursive;
-  letter-spacing: -0.2px;
+  letter-spacing: .05em;
   line-height: 1.6;
   font-weight: 600;
   font-style: normal;
@@ -522,8 +520,8 @@ a {
 // Fade-in Animation
 .fade-in {
   opacity: 0;
-  transform: translateY(100px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
+  transform: translateY(30%);
+  transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
 .fade-in.show {
