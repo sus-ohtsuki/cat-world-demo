@@ -5,18 +5,11 @@
 .section-about {
   position: relative;
   margin: 0 auto;
-  margin-top: 150px;
+  padding-top: 80px;
+  max-width: 1400px;
 
-  @media(min-width: 390px) {
-    margin-top: 0;
-  }
-
-  @media(min-width: 700px) {
+  @media(min-width: 768px) {
     margin-top: 300px;
-  }
-
-  @media(min-width: 1020px) {
-    max-width: 1400px;
   }
 
   .section-about__image {
@@ -27,8 +20,8 @@
       vertical-align: top;
 
       @media(min-width: 1024px) {
-        position: absolute; // 絶対位置に設定
-        width: 550px;
+        position: absolute;
+        width: 500px;
         height: 480px;
         border-radius: 10px;
         float: inline-end;
@@ -57,6 +50,10 @@
       color: $color-white;
       font-size: 3.6rem;
       padding: 95px 0 0px 20px;
+
+      @media(min-width: 1024px) {
+        padding-left: 0;
+      }
     }
 
     p {
@@ -65,7 +62,8 @@
       padding: 30px 20px 0px 20px;
 
       @media(min-width: 1024px) {
-        padding-right: 50vw;
+        padding-left: 0;
+        padding-right: 40vw;
         max-width: 60vw;
       }
 
@@ -83,10 +81,10 @@
       text-align: right;
 
       @media(min-width: 1024px) {
-        padding-right: 45vw;
+        padding-right: 40vw;
       }
 
-      @media(min-width: 1224px) {
+      @media(min-width: 1200px) {
         padding-right: 35vw;
       }
 
@@ -96,6 +94,10 @@
 
       a {
         right: 24px;
+
+        @media(min-width: 1200px) {
+          right: 0;
+        }
       }
     }
   }
@@ -104,13 +106,26 @@
 // Cast
 .section-cast {
   padding: 160px 20px 0 20px;
-  max-width: 1130px;
-  margin: 0 auto;
+  max-width: 1400px;
+
+  @media (min-width: 1024px) {
+    width: 100%;
+    padding: 0;
+    padding-top: 180px;
+  }
+
+  @media (min-width: 1400px) {
+    margin: 0 auto;
+  }
 
   &__title {
     font-size: 3.6rem;
     margin-bottom: 70px;
     color: $color-green;
+
+    @media (min-width: 1024px) {
+      padding-left: 100px;
+    }
   }
 
   &__cards {
@@ -118,9 +133,11 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    max-width: 1130px;
 
     @media (min-width: 768px) {
       gap: 32px;
+      margin: 0 auto;
     }
   }
 
@@ -143,7 +160,7 @@
       box-shadow: inset 0px 0px 3px $color-shadow, inset -1px -1px 3px $color-white;
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: 1224px) {
       width: 250px;
       height: 400px;
     }
@@ -246,7 +263,7 @@
 
       @media(min-width: 1024px) {
         position: absolute;
-        width: 490px;
+        width: 450px;
         height: 440px;
         border-radius: 10px;
         float: inline-end;
@@ -263,7 +280,7 @@
     height: 447px;
 
     @media (min-width: 1024px) {
-      padding: 40px;
+      padding: 40px 0 0 100px;
     }
 
     @media (min-width: 1400px) {
@@ -272,27 +289,27 @@
   }
 
   &__title {
-    color: $color-white;
+    color: $color-bg;
     font-size: 3.6rem;
-    padding: 95px 0 0px 20px;
+    padding-top: 95px;
   }
 
   &__description {
-    color: $color-white;
+    color: $color-bg;
     font-size: 1.6rem;
-    padding: 30px 20px 0px 20px;
+    padding-top: 30px;
 
     @media(min-width: 1024px) {
-      padding-right: 52vw;
-      max-width: 60vw;
+      padding-left: 0;
+      width: 42%;
     }
 
-    @media(min-width: 1300px) {
-      padding-right: 35vw;
+    @media(min-width: 1224px) {
+      width: 52%;
     }
 
     @media(min-width: 1900px) {
-      padding-right: 35%;
+      padding-right: 45%;
     }
   }
 
@@ -301,20 +318,19 @@
     text-align: right;
 
     @media(min-width: 1024px) {
-      padding-right: 52vw;
-      max-width: 60vw;
+      width: 42%;
     }
 
-    @media(min-width: 1300px) {
-      padding-right: 35vw;
+    @media(min-width: 1224px) {
+      width: 52%;
     }
 
     @media(min-width: 1900px) {
-      padding-right: 35%;
+      padding-right: 45%;
     }
 
     a {
-      right: 24px;
+      right: 16px;
     }
   }
 }
@@ -323,13 +339,23 @@
 .section-info {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 30px 20px 0 20px;
+  max-width: 1260px;
+
+  @media(min-width: 820px) {
+    align-items: center;
+  }
 
   @media(min-width: 1024px) {
+    justify-content: start;
+    align-items: center;
+    padding-left: 100px;
     padding-top: 200px;
     flex-direction: row;
-    justify-content: center;
+  }
+
+  @media(min-width: 1400px) {
+    margin: 0 auto;
   }
 
   &__item {
@@ -337,7 +363,7 @@
   }
 
   &__title {
-    font-size: 2.4rem;
+    font-size: 3.6rem;
     color: $color-green;
     padding-bottom: 30px;
   }
@@ -345,7 +371,7 @@
   &__content {
     white-space: pre-line;
 
-    @media(min-width: 768px) {
+    @media(min-width: 820px) {
       width: 600px;
       max-width: 600px;
     }
@@ -388,7 +414,7 @@
     @media(min-width: 1024px) {
       width: 40vw;
       max-width: 510px;
-      padding-left: 60px;
+      padding-left: 80px;
     }
 
     img {
@@ -408,35 +434,38 @@
 .section-journal {
   width: 100%;
   max-width: 1400px;
-  margin: 0 auto;
   margin-top: 180px;
   display: flex;
   flex-direction: column;
 
-  @media(min-width: 1024px) {
-    margin-top: 200px;
+  @media(min-width: 1400px) {
+    margin: 0 auto;
+    padding-top: 180px;
   }
 
   &-container {
-    margin: 0 auto;
+    padding: 0 20px 0 20px;
 
     @media(min-width: 1024px) {
+      padding-left: 0;
       display: flex;
       flex-direction: row;
       justify-content: center;
       margin: 0;
+      margin-right: 30px;
     }
   }
 
   &__contents {
     position: relative;
-    max-width: 600px;
-    margin: 0 auto;
+    width: 100%;
 
-    @media(min-width: 768px) {
+    @media(min-width: 820px) {
+      margin: 0;
       width: 600px;
       max-width: 600px;
       margin-top: 100px;
+      padding-left: 100px;
     }
   }
 
@@ -482,22 +511,23 @@
   }
 
   &__title {
-    font-size: 2.4rem;
+    font-size: 3.6rem;
     color: $color-green;
     padding-top: 60px;
-    padding-left: 20px;
     margin-bottom: 20px;
+
+    @media (min-width: 1024px) {
+      padding-left: 0;
+    }
   }
 
   &__entries {
-    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    max-width: 600px;
     margin-bottom: 40px;
 
-    @media (min-width: 768px) {
+    @media (min-width: 820px) {
       gap: 32px;
     }
   }
@@ -518,7 +548,7 @@
     margin-bottom: 20px;
     position: absolute;
     top: 30px;
-    right: 16px;
+    right: 0px;
 
     img {
       width: 70%;

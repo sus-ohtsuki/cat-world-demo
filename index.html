@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="assets/css/common.css">
   <link rel="stylesheet" href="assets/css/top_hero.css">
   <link rel="stylesheet" href="assets/css/top.css">
+  <link rel="stylesheet" href="assets/css/modal.css">
 
   <!-- favicon -->
   <link rel="icon" href="assets/images/common/favicon.ico">
@@ -93,25 +94,25 @@
     <section class="section-cast fade-in">
       <h2 class="section-cast__title">Cast</h2>
       <div class="section-cast__cards">
-        <div class="section-cast__card-container">
+        <div class="section-cast__card-container" data-cat="ringo">
           <div class="section-cast__card">
             <img src="assets/images/cast/cat1.webp" alt="RINGO" class="section-cast__card-image">
           </div>
           <p class="section-cast__name">RINGO</p>
         </div>
-        <div class="section-cast__card-container">
+        <div class="section-cast__card-container" data-cat="gon">
           <div class="section-cast__card">
             <img src="assets/images/cast/cat2.webp" alt="GON" class="section-cast__card-image">
           </div>
           <p class="section-cast__name">GON</p>
         </div>
-        <div class="section-cast__card-container">
+        <div class="section-cast__card-container" data-cat="tora">
           <div class="section-cast__card">
             <img src="assets/images/cast/cat3.webp" alt="TORA" class="section-cast__card-image">
           </div>
           <p class="section-cast__name">TORA</p>
         </div>
-        <div class="section-cast__card-container">
+        <div class="section-cast__card-container" data-cat="patra">
           <div class="section-cast__card">
             <img src="assets/images/cast/cat4.webp" alt="PATRA" class="section-cast__card-image">
           </div>
@@ -210,9 +211,26 @@
     </section>
   </main>
 
+  <div id="catModal" class="modal">
+    <div class="modal-content">
+      <span class="modal-close">&times;</span>
+      <div class="modal-image-container">
+        <div class="outer-circle">
+          <div class="inner-circle">
+            <img src="" alt="" class="modal-image">
+          </div>
+        </div>
+      </div>
+      <h2 class="modal-cat-name"></h2>
+      <p class="modal-cat-breed"></p>
+      <p class="modal-cat-description"></p>
+    </div>
+  </div>
+
   <footer class="footer" id="footer-placeholder"></footer>
 
   <script src="assets/js/common.js"></script>
+  <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

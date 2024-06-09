@@ -413,7 +413,11 @@ a {
   background-color: $color-green;
   padding: 40px 0 0 0;
   color: $color-bg;
-  max-width: 1340px;
+  max-width: 1400px;
+
+  @media(min-width: 1024px) {
+    padding-left: 60px;
+  }
 
   @media(min-width: 1400px) {
     border-radius: 10px 10px 0 0;
@@ -430,7 +434,7 @@ a {
       right: 0;
       bottom: 0;
       padding-bottom: 60px;
-      padding-right: 40px;
+      padding-right: 80px;
     }
 
     &-svg {
@@ -450,7 +454,7 @@ a {
 
     &-list {
       list-style: none;
-      padding-left: 30px;
+      padding-left: 16px;
       padding-bottom: 16px;
       margin: 0;
     }
@@ -510,7 +514,7 @@ a {
       position: absolute;
       bottom: 0;
       right: 0;
-      padding: 80px 40px 24px;
+      padding: 80px 80px 24px;
     }
   }
 }
