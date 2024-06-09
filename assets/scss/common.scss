@@ -24,6 +24,8 @@ html {
   background-color: $color-bg;
   overflow-x: hidden;
   width: 100%;
+  /* 16px * 62.5% = 10px */
+  font-size: 62.5%;
 }
 
 body,
@@ -34,17 +36,17 @@ textarea,
 button {
   font-family: 'Coves', sans-serif, Arial;
   letter-spacing: -0.2px;
-  /* 16px * 62.5% = 10px */
-  font-size: 62.5%;
 }
 
-p {
+p,
+time,
+address {
   font-family: 'Klee One', cursive;
   letter-spacing: -0.2px;
   line-height: 1.6;
   font-weight: 500;
   font-style: normal;
-  font-size: 1.6em;
+  font-size: 1.6rem;
 }
 
 header {
@@ -116,6 +118,19 @@ input {
   background-color: $color-bg;
 }
 
+.content-container {
+  padding: 20px;
+  box-shadow: inset 0px 0px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  width: 100%;
+  min-width: 330px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  border-radius: 10px;
+  color: $color-green;
+}
+
 label {
   display: block;
   margin-bottom: $ruler*1.5;
@@ -175,6 +190,7 @@ button {
   }
 
   &.unit {
+    padding: 0;
     background-color: $color-bg;
     border-radius: calc($ruler / 2);
     background: linear-gradient(145deg, #e6e3dc, #ffffff);
@@ -185,10 +201,13 @@ button {
     justify-content: center;
     align-items: center;
     margin: 0 calc($ruler / 2);
-    font-size: $ruler*1.2;
 
     .icon {
       margin-right: 0;
+    }
+
+    &::after {
+      content: '';
     }
   }
 
@@ -218,7 +237,7 @@ a {
   display: inline-block;
   color: $color-bg;
   text-decoration: none;
-  font-size: 2.4em;
+  font-size: 2.4rem;
   font-weight: 600;
   position: relative;
   padding-bottom: 2px;
@@ -242,6 +261,120 @@ a {
     &::after {
       color: $color-yellow;
       margin-left: 10px; // ホバー時に矢印を動かす
+    }
+  }
+}
+
+.none {
+  list-style: none;
+}
+
+// Footer
+.footer {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 200px;
+  background-color: $color-green;
+  padding: 40px 30px;
+  color: $color-bg;
+  max-width: 1400px;
+
+  @media(min-width: 1400px) {
+    border-radius: 10px 10px 0 0;
+  }
+
+  &__logo {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: end;
+
+    @media(min-width: 768px) {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      padding-bottom: 120px;
+      padding-right: 40px;
+    }
+
+    &-svg {
+      width: 85px;
+      height: 70px;
+      mask-image: url('../images/common/logo1.svg');
+      mask-size: contain;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background-color: $color-bg;
+    }
+  }
+
+  &__nav {
+    margin-top: 160px;
+    margin-bottom: 30px;
+    padding-left: 10px;
+
+    &-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &-item {
+      margin-bottom: 10px;
+      padding: 0.5px 0 0.5px 24px;
+      font-size: 1.6em;
+      letter-spacing: .1rem;
+      line-height: 1.2;
+    }
+
+    &-item.current {
+      background-image: url('../images/common/logo2.svg');
+      background-repeat: no-repeat;
+      background-position: top 0 left 0px;
+      background-size: 16px;
+    }
+
+    &-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-link {
+      color: $color-white;
+      text-decoration: none;
+      font-size: 1.6em;
+      display: flex;
+      align-items: center;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__instagram-svg {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    mask-image: url('../images/common/instagram_icon.svg');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: $color-bg;
+  }
+
+  &__copyright {
+    padding-top: 45px;
+    padding-left: 30px;
+    font-size: 1.4em;
+    letter-spacing: .2rem;
+    color: $color-bg;
+
+    @media(min-width: 768px) {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      padding: 80px 40px;
     }
   }
 }

@@ -24,6 +24,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/common.css">
+  <link rel="stylesheet" href="assets/css/top_hero.css">
   <link rel="stylesheet" href="assets/css/top.css">
 
   <!-- favicon -->
@@ -147,34 +148,111 @@
       </div>
     </section>
 
-    <!-- <section class="section-info">
-      <div class="section-info__item">
-        <h3 class="section-info__title">Open</h3>
-        <div class="section-info__content">
-          <p>11:00 - 20:00</p>
-          <p>定休日</p>
-          <ul>
-            <li>月曜日（祝日の場合は翌火曜休み）</li>
-            <li>年末年始</li>
-          </ul>
+    <section class="section-info">
+      <div class="section-info-container">
+        <div class="section-info__item">
+          <h3 class="section-info__title">Open</h3>
+          <div class="section-info__content content-container">
+            <p>11:00 - 20:00</p>
+            <p>定休日</p>
+            <ul>
+              <li>月曜日（祝日の場合は翌火曜休み）</li>
+              <li>年末年始</li>
+            </ul>
+          </div>
         </div>
-      </div>
-      <div class="section-info__item">
-        <h3 class="section-info__title">Access</h3>
-        <div class="section-info__content">
-          <p>〒150-0001</p>
-          <p>東京都渋谷区神宮前4丁目12-10</p>
-          <p>東京メトロ銀座線表参道駅 徒歩5分</p>
-          <p>Tel: 03-1234-5678</p>
-          <div class="more-link">
-            <a href="about.html">Google Map <span class="arrow"></span></a>
+        <div class="section-info__item">
+          <h3 class="section-info__title">Access</h3>
+          <div class="section-info__content content-container">
+            <address>
+              〒150-0001<br>
+              東京都渋谷区神宮前4丁目12-10<br>
+              東京メトロ銀座線表参道駅 徒歩5分<br>
+              Tel: 03-1234-5678
+            </address>
+            <!-- <p>〒150-0001</p>
+            <p>東京都渋谷区神宮前4丁目12-10</p>
+            <p>東京メトロ銀座線表参道駅 徒歩5分</p>
+            <p>Tel: 03-1234-5678</p> -->
+            <div class="more-link">
+              <a href="about.html">Google Map <span class="arrow"></span></a>
+            </div>
           </div>
         </div>
       </div>
-    </section> -->
+      <div class="section-info__map">
+        <img src="assets/images/top/map.svg" alt="Map">
+      </div>
+    </section>
+
+    <section class="section-journal">
+      <div class="section-journal__image">
+        <img src="assets/images/top/shop2.webp" alt="Journal Image 1">
+      </div>
+      <div class="section-journal-container">
+        <div class="section-journal__contents">
+          <h2 class="section-journal__title">Journal</h2>
+          <div class="section-journal__entries">
+            <ol>
+              <li class="section-journal__entry content-container none">
+                <time datetime="2024-05-21" class="section-journal__date">2024.05.21</time>
+                <p class="section-journal__text">最新イベント情報はInstagramで更新中</p>
+              </li>
+            </ol>
+            <div class="section-journal__entry content-container">
+              <time datetime="2024-05-11" class="section-journal__date">2024.05.11</time>
+              <p class="section-journal__text">人気のキャットフードを入荷しました</p>
+            </div>
+            <div class="section-journal__entry content-container">
+              <time datetime="2024-05-01" class="section-journal__date">2024.05.01</time>
+              <p class="section-journal__text">新しいキャストが仲間入りしました</p>
+            </div>
+          </div>
+          <div class="section-journal__instagram">
+            <button class="unit" type="button">
+              <img src="assets/images/common/instagram_icon.svg" alt="Instagram Icon">
+            </button>
+          </div>
+        </div>
+        <div class="section-journal__image">
+          <img src="assets/images/common/cats1.png" alt="Journal Image 2">
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
+    <div class="footer__logo">
+      <div class="footer__logo-svg"></div>
+      <!-- <img src="assets/images/common/logo1.svg" alt="Cat World Logo"> -->
+    </div>
+    <nav class="footer__nav">
+      <ul class="footer__nav-list">
+        <li class="footer__nav-item current">
+          <a href="#" class="footer__nav-link">Top</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">About</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">Cast</a>
+        </li>
+        <li class="footer__nav-item">
+          <a href="#" class="footer__nav-link">Contact</a>
+        </li>
+        <div class="footer__nav-container">
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">Online Shop</a>
+          </li>
+          <li class="footer__nav-item">
+            <a href="#" class="footer__nav-link">
+              <div class="footer__instagram-svg"></div>Instagram
+            </a>
+          </li>
+        </div>
+      </ul>
+    </nav>
+    <small class="footer__copyright">© Cat World. All rights reserved.</small>
   </footer>
 </body>
 
