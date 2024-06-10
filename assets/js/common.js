@@ -40,10 +40,15 @@
   });
 
   function hamburgerMenuToggle() {
-    let menuIcon = document.querySelector('.menu-icon-area');
-    let mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const menuIcon = document.querySelector('.menu-icon-area');
+    const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+    const fab = document.getElementById('fab');
 
     menuIcon.addEventListener('click', function () {
+      mobileMenuOverlay.classList.add('active');
+    });
+
+    fab.addEventListener('click', function () {
       mobileMenuOverlay.classList.add('active');
     });
 

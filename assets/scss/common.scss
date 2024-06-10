@@ -520,7 +520,7 @@ a {
 // Fade-in Animation
 .fade-in {
   opacity: 0;
-  transform: translateY(30%);
+  transform: translateY(20%);
   transition: opacity 2s ease-out, transform 2s ease-out;
 }
 
