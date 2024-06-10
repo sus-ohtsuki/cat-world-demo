@@ -38,6 +38,7 @@ button {
   font-family: 'Coves', sans-serif, Arial;
 }
 
+h3,
 p,
 li,
 time,
@@ -237,13 +238,20 @@ input {
   padding: 20px;
   box-shadow: inset 0px 0px 5px $color-shadow, inset -5px -5px 10px $color-white;
   width: 100%;
-  min-width: 330px;
+  // min-width: 330px;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   appearance: none;
   -webkit-appearance: none;
   border-radius: 10px;
   color: $color-green;
+
+  &.green {
+    border-radius: 10px;
+    background: $color-green;
+    box-shadow: inset 5px 5px 10px #192f38,
+      inset -5px -5px 10px #315d6e;
+  }
 }
 
 label {

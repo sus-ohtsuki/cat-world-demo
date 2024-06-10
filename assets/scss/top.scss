@@ -152,8 +152,8 @@
     max-width: 250px;
 
     &:hover {
-      box-shadow: -5px -5px 10px $color-white, 5px 5px 10px $color-button-shadow;
-      transform: translate(5px, 5px);
+      box-shadow: -5px -5px 5px $color-white, 5px 5px 5px $color-button-shadow;
+      transform: translate(2px, 2px);
     }
 
     &:active {
@@ -178,6 +178,7 @@
   }
 
   &__name {
+    font-family: 'Coves', sans-serif;
     margin-top: 10px;
     font-size: 2.4rem;
     letter-spacing: .1em;
