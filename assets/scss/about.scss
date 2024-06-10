@@ -12,7 +12,7 @@
     height: 100px;
 
     h2 {
-      font-size: 3.2rem;
+      font-size: 3.6rem;
       color: $color-bg;
     }
   }
@@ -23,6 +23,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;  
 
     @media(min-width: 768px) {
       flex-direction: row;
@@ -38,6 +40,10 @@
       box-shadow: -5px -5px 10px $color-white, 5px 5px 10px $color-shadow;
       object-fit: cover;
       object-position: 10% 70%;
+
+      @media(min-width: 1024px) {
+        object-position: 10% 65%;
+      }
     }
 
     &.top-image {
@@ -47,8 +53,13 @@
       top: 30px;
       left: 30px;
 
-      @media(min-width: 768px) {
-        order: 1;
+      @media(min-width: 1024px) {
+        position: relative;
+        width: 718px;
+        height: 490px;
+        top: -70px;
+        right: -20px;
+        scale: 0.75;
       }
     }
 
@@ -56,23 +67,50 @@
       width: 290px;
       height: 140px;
       position: absolute;
-      top: 620px;
+      top: 590px;
       right: -40px;
 
       @media(min-width: 768px) {
-        order: 3;
+        right: -40px;
+        top: 500px;
+        scale: 1.2;
+      }
+
+      @media(min-width: 1024px) {
+        width: 985px;
+        height: 324px;
+        top: 600px;
+        left: 0px;
+        scale: 0.8;
       }
     }
   }
 
+  &-container {
+    width: 100%;
+    max-width: 1400px;
+
+    @media(min-width: 1024px) {
+      padding-top: 160px;
+      padding-left: 100px;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: left;
+    }
+  }
+
   &__text {
-    width: 335px;
-    position: absolute;
-    top: 180px;
+    margin-top: 180px;
     padding: 60px 32px 100px 32px;
 
+    @media(min-width: 1024px) {
+      width: 500px;
+      height: 400px;
+      margin-top: 0;
+    }
+
     h3 {
-      font-size: 2.4rem;
+      font-size: 3.6rem;
       color: $color-green;
       margin-bottom: 20px;
     }
