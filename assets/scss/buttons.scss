@@ -1,5 +1,80 @@
 @import 'variables';
 
+button {
+  border: 0;
+  outline: 0;
+  font-size: $ruler;
+  border-radius: $ruler * 2;
+  padding: $ruler;
+  background-color: $color-yellow;
+}
+
+button {
+  margin: 0 auto;
+  display: inline-block;
+  color: $color-green;
+  position: relative;
+  transition: all 0.3s ease;
+  box-shadow: -5px -5px 10px $color-white, 5px 5px 10px $color-button-shadow;
+
+  @media (min-width: 768px) {
+    width: 345px;
+  }
+
+  &::after {
+    content: '>';
+    padding-left: 85px;
+    transition: margin-left 0.3s ease, color 0.3s ease;
+    position: absolute;
+
+    @media (min-width: 768px) {
+      padding-left: 100px;
+    }
+  }
+
+  &:hover {
+    color: $color-green;
+    border-color: $color-green;
+    box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+
+    &::after {
+      color: $color-green;
+      margin-left: 10px; // ホバー時に矢印を動かす
+    }
+  }
+
+  &:active {
+    box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-white;
+  }
+
+  &.unit {
+    padding: 0;
+    background-color: $color-bg;
+    border-radius: calc($ruler / 2);
+    background: linear-gradient(145deg, #e6e3dc, #ffffff);
+    line-height: 0;
+    width: $ruler*3;
+    height: $ruler*3;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 calc($ruler / 2);
+
+    .icon {
+      margin-right: 0;
+    }
+
+    &::after {
+      content: '';
+    }
+  }
+
+  &.green {
+    display: block;
+    color: $color-green;
+  }
+}
+
 // Floating Action Button
 button.fab {
   position: fixed;
