@@ -1,0 +1,86 @@
+@import 'variables';
+
+.section-about {
+  background-color: $color-bg;
+  min-height: 876px;
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-green;
+    height: 100px;
+
+    h2 {
+      font-size: 3.2rem;
+      color: $color-bg;
+    }
+  }
+
+  &__content {
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media(min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-around;
+    }
+  }
+
+  &__image {
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 2ch;
+      box-shadow: -5px -5px 10px $color-white, 5px 5px 10px $color-shadow;
+      object-fit: cover;
+      object-position: 10% 70%;
+    }
+
+    &.top-image {
+      width: 192px;
+      height: 192px;
+      position: absolute;
+      top: 30px;
+      left: 30px;
+
+      @media(min-width: 768px) {
+        order: 1;
+      }
+    }
+
+    &.bottom-image {
+      width: 290px;
+      height: 140px;
+      position: absolute;
+      top: 620px;
+      right: -40px;
+
+      @media(min-width: 768px) {
+        order: 3;
+      }
+    }
+  }
+
+  &__text {
+    width: 335px;
+    position: absolute;
+    top: 180px;
+    padding: 60px 32px 100px 32px;
+
+    h3 {
+      font-size: 2.4rem;
+      color: $color-green;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.6rem;
+      color: $color-green;
+      white-space: pre-line;
+    }
+  }
+}
