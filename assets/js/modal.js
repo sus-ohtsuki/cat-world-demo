@@ -1,7 +1,17 @@
 {
   document.addEventListener("DOMContentLoaded", function () {
+    // modal load
+    fetch('components/cast_modal.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('cat-modal').innerHTML = data;
+        showCastModal();
+      });
+  });
+
+  function showCastModal() {
     // モーダル関連のスクリプト
-    let catModal = document.getElementById('catModal');
+    let catModal = document.getElementById('cat-modal');
     let modalImage = document.querySelector('.modal-image');
     let modalCatName = document.querySelector('.modal-cat-name');
     let modalCatBreed = document.querySelector('.modal-cat-breed');
@@ -59,5 +69,5 @@
         catModal.classList.remove('active');
       }
     });
-  });
+  }
 }
