@@ -442,6 +442,15 @@ a {
 }
 
 // Fade-in Animation
+body {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.body-fade-in {
+  opacity: 1;
+}
+
 .fade-in {
   opacity: 0;
   transform: translateY(20%);
