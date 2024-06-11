@@ -230,6 +230,7 @@
 
     @media(min-width: 1024px) {
       width: 300px;
+      margin-bottom: 20px;
     }
 
     h3 {
@@ -245,6 +246,82 @@
 
       &.double-line {
         padding-bottom: 32px;
+      }
+    }
+  }
+}
+
+.section-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+  margin-top: 120px;
+
+  @media(min-width: 1024px) {
+    margin-top: 200px;
+  }
+
+  .banner-link {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 180px;
+
+    @media(min-width: 1024px) {
+      width: 800px;
+      height: 280px;
+    }
+
+    .banner {
+      position: relative;
+      height: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: -5px -5px 10px $color-white, 5px 5px 10px $color-shadow;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: -10px -10px 15px $color-white, 10px 10px 15px $color-shadow;
+    
+        &::after {
+          color: $color-green;
+        }
+      }
+    
+      &:active {
+        box-shadow: inset 1px 1px 2px $color-shadow, inset -1px -1px 2px $color-bg;
+      }
+    
+      .banner-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: brightness(0.9); // 画像を暗くしてテキストを見やすくする
+        transition: filter 0.3s ease;
+      }
+
+      .banner-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-yellow;
+        opacity: 0.9;
+        color: $color-green;
+        font-size: 3.2rem;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+
+        @media (min-width: 1024px){
+          font-size: 3.6rem;
+        }
       }
     }
   }
