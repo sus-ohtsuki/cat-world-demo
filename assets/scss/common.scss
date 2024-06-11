@@ -236,9 +236,10 @@ input {
 
 .content-container {
   padding: 20px;
-  box-shadow: inset 0px 0px 5px $color-shadow, inset -5px -5px 10px $color-white;
+  background: $color-bg;
+  box-shadow: inset 2px 2px 8px #b5b3ad,
+  inset -5px -5px 10px #ffffff;
   width: 100%;
-  // min-width: 330px;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
   appearance: none;
@@ -337,20 +338,20 @@ a {
 
 // Footer
 .footer {
-  position: relative;
   margin: 0 auto;
   margin-top: 200px;
   background-color: $color-green;
   padding: 40px 0 0 0;
   color: $color-bg;
-  max-width: 1400px;
+
+  &-container {
+    position: relative;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
 
   @media(min-width: 1024px) {
     padding-left: 60px;
-  }
-
-  @media(min-width: 1400px) {
-    border-radius: 10px 10px 0 0;
   }
 
   &__logo {
@@ -381,6 +382,7 @@ a {
   &__nav {
     margin-top: 160px;
     padding-left: 10px;
+    width: 100%;
 
     &-list {
       list-style: none;
@@ -399,7 +401,7 @@ a {
     &-item.current {
       background-image: url('../images/common/logo2.svg');
       background-repeat: no-repeat;
-      background-position: top 10px left 0;
+      background-position: top 6px left 0;
       background-size: 20px;
     }
 
@@ -414,6 +416,8 @@ a {
       color: $color-white;
       text-decoration: none;
       font-size: 1.8rem;
+      font-family: 'Coves', sans-serif;
+      font-weight: 500;
       display: flex;
       align-items: center;
       padding-left: 8px;
