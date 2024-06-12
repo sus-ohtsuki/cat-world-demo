@@ -336,6 +336,28 @@ a {
   list-style: none;
 }
 
+// ページタイトル
+.page-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $color-green;
+  height: 100px;
+
+  @media(min-width: 1024px) {
+    height: 150px;
+  }
+
+  h1 {
+    font-size: 3.2rem;
+    color: $color-bg;
+
+    @media(min-width: 1024px) {
+      font-size: 3.6rem;
+    }
+  }
+}
+
 // Footer
 .footer {
   margin: 0 auto;

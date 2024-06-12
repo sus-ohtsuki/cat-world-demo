@@ -3,18 +3,22 @@
 .section-about {
   background-color: $color-bg;
 
-  &__title {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: $color-green;
-    height: 100px;
+  // &__title {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  //   background-color: $color-green;
+  //   height: 100px;
 
-    h1 {
-      font-size: 3.6rem;
-      color: $color-bg;
-    }
-  }
+  //   @media(min-width: 1024px) {
+  //     height: 150px;
+  //   }
+
+  //   h1 {
+  //     font-size: 3.6rem;
+  //     color: $color-bg;
+  //   }
+  // }
 
   &__content {
     padding: 0 20px;
