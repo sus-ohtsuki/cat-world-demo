@@ -41,6 +41,24 @@
         breed: "Persian",
         description: "優雅で上品な性格。\nフワフワな毛並みで、撫でられるのも好きです。",
         image: "assets/images/cast/cat4.webp"
+      },
+      kinako: {
+        name: "KINAKO",
+        breed: "Siberian",
+        description: "遊び好きで活発。\nでも、疲れるとすぐにお昼寝。",
+        image: "assets/images/cast/cat5.webp"
+      },
+      yuzu_mikan: {
+        name: "YUZU & MIKAN",
+        breed: "Bengal",
+        description: "兄弟でいつも一緒。\n冒険心が強く、家中を探検しています。",
+        image: "assets/images/cast/cat6.webp"
+      },
+      ran: {
+        name: "RAN",
+        breed: "Mix",
+        description: "静かで慎重な性格。\n観察力が鋭く、落ち着いた環境を好みます。",
+        image: "assets/images/cast/cat7.webp"
       }
     };
 
@@ -49,25 +67,32 @@
     catCards.forEach(function (card) {
       card.addEventListener('click', function () {
         let catKey = card.getAttribute('data-cat');
+
+        if (catKey == '') {
+          return;
+        }
+
         let cat = cats[catKey];
 
         modalImage.src = cat.image;
         modalCatName.textContent = cat.name;
         modalCatBreed.textContent = cat.breed;
         modalCatDescription.textContent = cat.description;
-
+        modalImage.classList.add(catKey);
         catModal.classList.add('active');
+
+        catModal.addEventListener('click', function () {
+          catModal.classList.remove('active');
+          modalImage.classList.remove(catKey);
+        });
+    
+        window.addEventListener('click', function (event) {
+          if (event.target == catModal) {
+            catModal.classList.remove('active');
+            modalImage.classList.remove(catKey);
+          }
+        });    
       });
-    });
-
-    catModal.addEventListener('click', function () {
-      catModal.classList.remove('active');
-    });
-
-    window.addEventListener('click', function (event) {
-      if (event.target == catModal) {
-        catModal.classList.remove('active');
-      }
     });
   }
 }
