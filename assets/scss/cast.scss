@@ -14,11 +14,16 @@
     @media (min-width: 768px) {
       gap: 32px;
       margin: 0 auto;
+      margin-top: 80px;
     }
 
     // ２段目のマージンを狭くする
-    &:nth-of-type(3){
+    &:nth-of-type(3) {
       margin-top: 20px;
+
+      @media (min-width: 768px) {
+        margin-top: 120px;
+      }
     }
   }
 
@@ -68,7 +73,7 @@
     &.hide {
       background-color: $color-green;
       pointer-events: none;
-  
+
       img {
         width: 100%;
         scale: 0.4;
@@ -84,6 +89,10 @@
     letter-spacing: .1em;
     text-align: center;
     color: $color-green;
+
+    @media (min-width: 768px) {
+      font-size: 2.2rem;
+    }
   }
 
   // cat2とcat4のカードを下に移動
@@ -102,10 +111,35 @@
     font-size: 2.4rem;
     font-weight: 600;
     margin-top: 220px;
+    position: relative;
 
     @media (min-width: 768px) {
       width: 345px;
       margin-top: 250px;
+    }
+
+    &::after {
+      content: '<';
+      padding: 0;
+      transition: margin-left 0.3s ease, color 0.3s ease;
+      position: absolute;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%); 
+
+      @media (min-width: 768px) {
+      }
+    }
+
+    &:hover {
+      color: $color-green;
+      border-color: $color-green;
+      box-shadow: -2px -2px 5px $color-white, 2px 2px 5px $color-shadow;
+  
+      &::after {
+        color: $color-green;
+        margin-left: -10px;
+      }
     }
   }
 }

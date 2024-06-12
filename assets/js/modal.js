@@ -51,7 +51,7 @@
       yuzu_mikan: {
         name: "YUZU & MIKAN",
         breed: "Bengal",
-        description: "兄弟でいつも一緒。\n冒険心が強く、家中を探検しています。",
+        description: "兄弟でいつも一緒。\n冒険心が強く、部屋中を探検しています。",
         image: "assets/images/cast/cat6.webp"
       },
       ran: {
