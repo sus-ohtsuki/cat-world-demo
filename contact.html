@@ -4,79 +4,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  <meta name="description" content="スポーツは楽しい！ DHW Company は、テクノロジーを通じて、スポーツに関わる全ての人達を応援します。">
+  <meta name="description" content="フレンドリーな猫たちとリラックスできるカフェ -Cat World-">
 
   <!-- ogp -->
   <!-- <meta property="og:url" content="https://example.com"> -->
-  <meta property="og:title" content="DHW Company">
-  <meta property="og:site_name" content="DHW Company">
+  <meta property="og:title" content="Cat World">
+  <meta property="og:site_name" content="Cat World">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
   <meta property="og:image" content="assets/images/common/ogp.jpg">
-  <meta property="og:description" content="スポーツは楽しい！ DHW Company は、テクノロジーを通じて、スポーツに関わる全ての人達を応援します。">
+  <meta property="og:description" content="フレンドリーな猫たちとリラックスできるカフェ -Cat World-">
 
   <!-- twitter card -->
   <meta name="twitter:card" content="summary">
 
-  <title>DHW Company</title>
+  <title>Cat World</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Klee+One&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/common.css">
-  <link rel="stylesheet" href="assets/css/top.css">
+  <link rel="stylesheet" href="assets/css/buttons.css">
+  <link rel="stylesheet" href="assets/css/contact.css">
+  <!-- <link rel="stylesheet" href="assets/css/top.css"> -->
 
   <!-- favicon -->
-  <!-- <link rel="icon" href="assets/images/common/favicon.ico"> -->
+  <link rel="icon" href="assets/images/common/favicon.ico">
 
   <!-- apple touch icon -->
-  <!-- <link rel="apple-touch-icon" href="assets/images/common/apple-touch-icon.png"> -->
-
+  <link rel="apple-touch-icon" href="assets/images/common/apple-touch-icon.png">
 </head>
 
 <body>
-  <header>
-    <div class="logo">
-      <img src="assets/images/common/logo2.svg" alt="Cat World Logo">
-    </div>
-    <nav class="menu-icon">
-      <div class="menu-icon"></div>
-    </nav>
-  </header>
+  <header class="header" id="header-placeholder"></header>
 
   <main class="main">
-    <!-- <form>
-      <div class="segment">
-        <h1>Sign up</h1>
-      </div>
-
-      <label>
-        <input type="text" placeholder="Email Address" />
-      </label>
-      <label>
-        <input type="password" placeholder="Password" />
-      </label>
-      <button class="green" type="button"><i class="icon ion-md-lock"></i> Log in</button>
-
-      <div class="segment">
-        <button class="unit" type="button"><i class="icon ion-md-arrow-back"></i></button>
-        <button class="unit" type="button"><i class="icon ion-md-bookmark"></i></button>
-        <button class="unit" type="button"><i class="icon ion-md-settings"></i></button>
-      </div>
-
+    <div class="page-title">
+      <h1>Contact</h1>
+    </div>
+    <form class="contact-form">
+      <p class="contact-form__text">
+        お問い合わせは、下のフォームにご入力ください。
+        返答までに日数を要する場合がありますので、あらかじめご了承ください。
+      </p>
       <div class="input-group">
-        <label>
-          <input type="text" placeholder="Email Address" />
-        </label>
-        <button class="unit" type="button"><i class="icon ion-md-search"></i></button>
+        <label for="name" class="required">お名前</label>
+        <input type="text" id="name" name="name" placeholder="" autocomplete="on" />
       </div>
-
-    </form> -->
-
+      <div class="input-group">
+        <label for="email" class="required">メールアドレス</label>
+        <input type="email" id="email" name="email" placeholder="cat-world@email.com" autocomplete="off"/>
+      </div>
+      <div class="input-group">
+        <label for="tel">電話番号</label>
+        <input type="tel" id="tel" name="tel" placeholder="09012345678" autocomplete="on" />
+      </div>
+      <div class="input-group">
+        <label for="contact" class="required">お問い合わせ内容</label>
+        <textarea name="contact" id="contact"></textarea>
+      </div>
+      <div id="check" class="input-checkbox-group">
+        <button id="checkButton" class="unit" type="button"><span class="icon"></span></button>
+        <label for="checkButton" class="required">この内容で送信します。</label>
+      </div>
+      <button class="contact-form__button green" type="button">Send</button>
+    </form>
   </main>
 
-  <footer class="footer">
-  </footer>
+  <footer class="footer" id="footer-placeholder"></footer>
+
+  <!-- フローティングアクションボタン -->
+  <button class="fab" id="fab">Menu</button>
+
+  <script src="assets/js/common.js"></script>
+  <!-- <script src="assets/js/modal.js"></script> -->
+  <script src="assets/js/button.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const checkButton = document.getElementById('check');
+      const icon = checkButton.querySelector('.icon');
+
+      checkButton.addEventListener('click', function () {
+        if (checkButton.classList.contains('checked')) {
+          checkButton.classList.remove('checked');
+          icon.textContent = '';
+        } else {
+          checkButton.classList.add('checked');
+          icon.textContent = '✔';
+        }
+      });
+    });
+  </script>
 </body>
 
 </html>

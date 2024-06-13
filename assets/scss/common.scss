@@ -42,7 +42,9 @@ h3,
 p,
 li,
 time,
-address {
+address,
+input,
+textarea {
   font-family: 'Klee One', cursive;
   letter-spacing: .05em;
   line-height: 1.6;
@@ -223,13 +225,7 @@ header {
 
   &::after {
     transform: rotate(-45deg);
-  }  
-}
-
-form {
-  padding: $ruler;
-  width: $ruler*20;
-  margin: 0 auto;
+  }
 }
 
 .segment {
@@ -237,7 +233,8 @@ form {
   text-align: center;
 }
 
-input {
+input,
+textarea {
   border: 0;
   outline: 0;
   font-size: $ruler;
@@ -250,7 +247,7 @@ input {
   padding: 20px;
   background: $color-bg;
   box-shadow: inset 2px 2px 8px #b5b3ad,
-  inset -5px -5px 10px #ffffff;
+    inset -5px -5px 10px #ffffff;
   width: 100%;
   box-sizing: border-box;
   transition: all 0.2s ease-in-out;
@@ -269,11 +266,21 @@ input {
 
 label {
   display: block;
-  margin-bottom: $ruler*1.5;
+  margin-bottom: 20px;
   width: 100%;
+  font-size: 1.6rem;
+  font-weight: 600;
+
+  &.required {
+    &::before {
+      content: '＊';
+      color: $color-orange;
+    }
+  }
 }
 
-input {
+input,
+textarea {
   margin-right: calc($ruler / 2);
   box-shadow: inset 1px 1px 5px $color-shadow, inset -5px -5px 10px $color-white;
   width: 100%;
@@ -288,13 +295,15 @@ input {
 }
 
 .input-group {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
+  @media (min-width: 768px) {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
 
-  label {
-    margin: 0;
-    flex: 1;
+    label {
+      margin: 0;
+      flex: 1;
+    }
   }
 }
 
