@@ -34,7 +34,7 @@
         // 内部リンクのみ処理
         if (link.hostname === window.location.hostname) {
           event.preventDefault();
-          var href = link.getAttribute('href');
+          const href = link.getAttribute('href');
 
           // フェードアウトを開始
           document.body.classList.remove('body-fade-in');

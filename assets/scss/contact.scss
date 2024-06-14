@@ -89,8 +89,9 @@
       }
 
       &.checked.icon {
-        content: '✔';
+        content: '✔︎';
         transform: scale(1.2);
+        color: $color-orange;
       }
     }
   }

@@ -408,7 +408,12 @@
     margin-top: 60px;
     text-align: center;
 
+    @media(min-width: 800px) {
+      display: none;
+    }
+
     @media(min-width: 1024px) {
+      display: block;
       width: 40vw;
       max-width: 510px;
       padding-left: 80px;
