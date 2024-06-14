@@ -39,7 +39,7 @@
 
     .modal-image-container {
       position: relative;
-      margin: 30px auto;
+      margin: 10px auto;
       width: 300px;
       height: 250px;
       border-radius: 4px;
@@ -67,7 +67,7 @@
     .modal-cat-name {
       font-size: 2.4rem;
       color: $color-bg;
-      margin-top: 40px;
+      margin-top: 60px;
 
       @media (min-width: 768px) {
         font-size: 3.2rem;

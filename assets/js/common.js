@@ -28,14 +28,13 @@
     document.body.classList.add('body-fade-in');
 
     // 全てのaタグにイベントリスナーを追加
-    var links = document.querySelectorAll('a');
+    const links = document.querySelectorAll('a');
     links.forEach(function (link) {
       link.addEventListener('click', function (event) {
         // 内部リンクのみ処理
         if (link.hostname === window.location.hostname) {
           event.preventDefault();
           const href = link.getAttribute('href');
-
           // フェードアウトを開始
           document.body.classList.remove('body-fade-in');
 
@@ -46,6 +45,17 @@
         }
       });
     });
+  }
+
+  function bodyFadeInAnimation() {
+    document.body.classList.add('body-fade-in');
+  }
+  
+  function applyFadeInClass() {
+    // 戻ってきた時にbody-fade-inクラスを再適用
+    if (!document.body.classList.contains('body-fade-in')) {
+      document.body.classList.add('body-fade-in');
+    }
   }
 
   function hamburgerMenuToggle() {
