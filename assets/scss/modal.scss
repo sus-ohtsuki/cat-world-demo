@@ -39,54 +39,22 @@
 
     .modal-image-container {
       position: relative;
-      margin: 60px auto;
-      width: 200px;
-      height: 200px;
+      margin: 30px auto;
+      width: 300px;
+      height: 250px;
+      border-radius: 4px;
+      overflow: hidden;
 
       @media (min-width: 768px) {
-        margin-top: 140px;
-      }
-
-      .outer-circle,
-      .inner-circle {
-        border-radius: 50%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-
-      .outer-circle {
-        width: 193px;
-        height: 193px;
-        background: linear-gradient(145deg, #153440, #4A6B77);
-        box-shadow: 5px 5px 8px #153440,
-          -5px -5px 8px #4A6B77;
-
-        @media (min-width: 768px) {
-          width: 413px;
-          height: 413px;
-        }
-      }
-
-      .inner-circle {
-        overflow: hidden;
-        width: 163px;
-        height: 163px;
-        background: linear-gradient(145deg, #153440, #4A6B77);
-        box-shadow: 5px 5px 8px #153440,
-          -5px -5px 8px #4A6B77;
-
-        @media (min-width: 768px) {
-          width: 348px;
-          height: 348px;
-        }
+        margin-top: 60px;
+        width: 450px;
+        height: 350px;  
       }
 
       .modal-image {
         width: 100%;
         height: 100%;
-        border-radius: 50%;
+        border-radius: 4px;
         object-fit: cover;
         scale: 1.5;
 
@@ -103,7 +71,7 @@
 
       @media (min-width: 768px) {
         font-size: 3.2rem;
-        padding-top: 90px;
+        padding-top: 20px;
       }
     }
 
