@@ -33,7 +33,7 @@
     text-align: center;
     box-shadow: 0, 5px 5px 15px $color-button-shadow;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       height: 700px;
     }
 
@@ -45,7 +45,7 @@
       border-radius: 4px;
       overflow: hidden;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-width) {
         margin-top: 60px;
         width: 450px;
         height: 350px;  
@@ -69,7 +69,7 @@
       color: $color-bg;
       margin-top: 60px;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-width) {
         font-size: 3.2rem;
         padding-top: 20px;
       }
@@ -80,7 +80,7 @@
       color: $color-bg;
       margin: 10px 0;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-width) {
         font-size: 2.4rem;
       }
     }
@@ -92,7 +92,7 @@
       line-height: 1.6;
       letter-spacing: 1;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-width) {
         font-size: 1.6rem;
       }
     }
@@ -132,7 +132,7 @@
     text-align: center;
     box-shadow: 0, 5px 5px 15px $color-button-shadow;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       width: 400px;
       height: 460px;
     }
@@ -159,7 +159,7 @@
         box-shadow: 5px 5px 8px #153440,
           -5px -5px 8px #4A6B77;
 
-        @media (min-width: 768px) {
+        @media (min-width: $tablet-width) {
           width: 200px;
           height: 200px;
           margin-top: 10px;
@@ -174,7 +174,7 @@
         box-shadow: 5px 5px 8px #153440,
           -5px -5px 8px #4A6B77;
 
-        @media (min-width: 768px) {
+        @media (min-width: $tablet-width) {
           width: 170px;
           height: 170px;
         }
@@ -182,14 +182,14 @@
         p {
           font-size: 3rem;
           font-weight: 600;
-          font-family: 'Coves', sans-serif;
+          font-family: $font-coves;
           letter-spacing: .7;
           line-height: 1.2;
           color: $color-bg;
           margin: 40px 0;
           white-space: pre-line;
 
-          @media (min-width: 768px) {
+          @media (min-width: $tablet-width) {
             font-size: 3.6rem;
           }
         }
@@ -198,11 +198,11 @@
   }
 
   &__message {
-    font-family: 'Coves', sans-serif;
+    font-family: $font-coves;
     font-size: 2.4rem;
     color: $color-bg;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       margin-top: 100px;
     }
   }

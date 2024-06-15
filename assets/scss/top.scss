@@ -6,9 +6,9 @@
   position: relative;
   margin: 0 auto;
   padding-top: 80px;
-  max-width: 1400px;
+  max-width: $window-max-width;
 
-  @media(min-width: 768px) {
+  @media(min-width: $tablet-width) {
     margin-top: 300px;
   }
 
@@ -19,7 +19,7 @@
       object-fit: cover;
       vertical-align: top;
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         position: absolute;
         width: 500px;
         height: 480px;
@@ -36,13 +36,13 @@
     padding-bottom: 95px;
     max-width: 1300px;
 
-    @media(min-width: 1024px) {
+    @media(min-width: $pc-width) {
       border-radius: 0 0 10px 0;
       padding-left: 100px;
       width: 80vw;
     }
 
-    @media(min-width: 1400px) {
+    @media(min-width: $window-max-width) {
       border-radius: 10px;
     }
 
@@ -51,7 +51,7 @@
       font-size: 3.6rem;
       padding: 95px 0 0px 20px;
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         padding-left: 0;
       }
     }
@@ -61,7 +61,7 @@
       font-size: 1.6rem;
       padding: 30px 20px 0px 20px;
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         padding-left: 0;
         padding-right: 40vw;
         max-width: 60vw;
@@ -80,7 +80,7 @@
       padding-top: 85px;
       text-align: right;
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         padding-right: 40vw;
       }
 
@@ -106,15 +106,16 @@
 // Cast
 .section-cast {
   padding: 160px 20px 0 20px;
-  max-width: 1400px;
+  max-width: $window-max-width;
+  margin: 0 auto;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $pc-width) {
     width: 100%;
     padding: 0;
     padding-top: 180px;
   }
 
-  @media (min-width: 1400px) {
+  @media ($window-max-width) {
     margin: 0 auto;
   }
 
@@ -123,7 +124,7 @@
     margin-bottom: 70px;
     color: $color-green;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $pc-width) {
       padding-left: 100px;
     }
   }
@@ -135,7 +136,7 @@
     gap: 20px;
     max-width: 1130px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       gap: 32px;
       margin: 0 auto;
     }
@@ -178,7 +179,7 @@
   }
 
   &__name {
-    font-family: 'Coves', sans-serif;
+    font-family: $font-coves;
     margin-top: 10px;
     font-size: 2.4rem;
     letter-spacing: .1em;
@@ -200,7 +201,7 @@
   button {
     margin-top: 220px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       margin-top: 250px;
     }
   }
@@ -213,10 +214,9 @@
   flex-direction: column;
   align-items: center;
   padding-top: 180px;
-  max-width: 1400px;
+  max-width: $window-max-width;
 
-  @media(min-width: 1024px) {
-    max-width: 1400px;
+  @media(min-width: $pc-width) {
     margin: 0 auto;
     padding-top: 470px;
     align-items: start;
@@ -233,7 +233,7 @@
       height: 270px;
       vertical-align: top;
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         position: absolute;
         width: 1170px;
         height: 345px;
@@ -258,7 +258,7 @@
       vertical-align: top;
       transform: scale(1.2);
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         position: absolute;
         width: 450px;
         height: 440px;
@@ -276,11 +276,11 @@
     max-width: 1180px;
     height: 447px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $pc-width) {
       padding: 40px 0 0 100px;
     }
 
-    @media (min-width: 1400px) {
+    @media ($window-max-width) {
       border-radius: 10px;
     }
   }
@@ -296,7 +296,7 @@
     font-size: 1.6rem;
     padding-top: 30px;
 
-    @media(min-width: 1024px) {
+    @media(min-width: $pc-width) {
       padding-left: 0;
       width: 42%;
     }
@@ -314,7 +314,7 @@
     padding-top: 85px;
     text-align: right;
 
-    @media(min-width: 1024px) {
+    @media(min-width: $pc-width) {
       width: 42%;
     }
 
@@ -337,22 +337,30 @@
   display: flex;
   flex-direction: column;
   padding: 30px 20px 0 20px;
-  max-width: 1260px;
+  max-width: $window-max-width;
+  margin: 0 auto;
 
   @media(min-width: 820px) {
     align-items: center;
   }
 
-  @media(min-width: 1024px) {
-    justify-content: start;
+  @media(min-width: $pc-width) {
+    justify-content: space-between;
     align-items: center;
-    padding-left: 100px;
     padding-top: 200px;
+    padding-left: 0;
     flex-direction: row;
   }
 
-  @media(min-width: 1400px) {
+  @media($window-max-width) {
     margin: 0 auto;
+  }
+
+  &-container {
+    @media(min-width: $pc-width) {
+      max-width: $window-max-width;
+      padding-left: 100px;
+    }
   }
 
   &__item {
@@ -377,7 +385,7 @@
       color: $color-green;
       border-bottom: 1px solid $color-green;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-width) {
         border: none;
         pointer-events: none;
         cursor: default;
@@ -405,18 +413,19 @@
   }
 
   &__map {
-    margin-top: 60px;
     text-align: center;
+    margin: 0 auto;
+    margin-top: 60px;
 
-    @media(min-width: 800px) {
+    @media(min-width: $pc-width) {
       display: none;
     }
 
-    @media(min-width: 1024px) {
+    @media(min-width: $pc-width) {
       display: block;
-      width: 40vw;
+      width: 50vw;
       max-width: 510px;
-      padding-left: 80px;
+      padding: 0 60px 0 60px;
     }
 
     img {
@@ -425,7 +434,7 @@
       object-fit: cover;
       max-width: 510px;
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         width: 100%;
       }
     }
@@ -435,12 +444,12 @@
 // Journal
 .section-journal {
   width: 100%;
-  max-width: 1400px;
+  max-width: $window-max-width;
   margin-top: 180px;
   display: flex;
   flex-direction: column;
 
-  @media(min-width: 1400px) {
+  @media(min-width: $window-max-width) {
     margin: 0 auto;
     padding-top: 180px;
   }
@@ -448,7 +457,7 @@
   &-container {
     padding: 0 20px 0 20px;
 
-    @media(min-width: 1024px) {
+    @media(min-width: $pc-width) {
       padding-left: 0;
       display: flex;
       flex-direction: row;
@@ -481,19 +490,19 @@
       object-fit: cover;
       object-position: 0 -180px;
 
-      @media(min-width: 768px) {
+      @media(min-width: $tablet-width) {
         width: 100%;
         height: 275px;
         object-position: bottom -130px right 0;
       }
 
-      @media(min-width: 1400px) {
+      @media(min-width: $window-max-width) {
         border-radius: 10px;
       }
     }
 
     &:nth-child(2) {
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         max-width: 600px;
         margin: 0 auto;
         margin-top: 200px;
@@ -506,7 +515,7 @@
       height: 260px;
       border-radius: 10px;
 
-      @media(min-width: 1024px) {
+      @media(min-width: $pc-width) {
         height: 380px;
       }
     }
@@ -518,7 +527,7 @@
     padding-top: 60px;
     margin-bottom: 20px;
 
-    @media (min-width: 1024px) {
+    @media (min-width: $pc-width) {
       padding-left: 0;
     }
   }

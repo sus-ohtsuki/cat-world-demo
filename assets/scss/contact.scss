@@ -7,15 +7,15 @@
   margin: 0 auto;
   margin-top: 60px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     margin-top: 120px;
   }
 
   &__text {
     color: $color-green;
-    font-family: 'Coves', sans-serif;
+    // font-family: $font-coves;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       white-space: pre-line;
       padding-bottom: 20px;
     }
@@ -25,7 +25,7 @@
   .input-checkbox-group {
     margin-top: 40px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       display: flex;
       align-items: center;
       justify-content: flex-start;
@@ -35,20 +35,28 @@
       color: $color-green;
       user-select: none;
       letter-spacing: .5;
+      font-family: $font-klee-one;
     }
 
     input {
       letter-spacing: 1;
+      color: $color-green;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-width) {
         width: 400px;
+      }
+
+      &::placeholder {
+        color: $color-green;
+        opacity: 0.5;
       }
     }
 
     textarea {
       height: 300px;
+      color: $color-green;
 
-      @media (min-width: 768px) {
+      @media (min-width: $tablet-width) {
         width: 400px;
       }
     }
@@ -60,7 +68,7 @@
     margin: 60px auto;
     width: 300px;
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       width: 400px;
       padding-left: 200px;
     }
@@ -104,7 +112,7 @@
       content: '';
     }
 
-    @media (min-width: 768px) {
+    @media (min-width: $tablet-width) {
       margin-top: 200px;
       width: 345px;
     }
