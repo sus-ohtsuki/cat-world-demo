@@ -280,7 +280,7 @@
       padding: 40px 0 0 100px;
     }
 
-    @media ($window-max-width) {
+    @media (min-width: $window-max-width) {
       border-radius: 10px;
     }
   }
